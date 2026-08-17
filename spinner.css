@@ -1,0 +1,156 @@
+.gl-spinner {
+  --gl-spinner-size: 20px;
+  --gl-spinner-duration: 1s;
+  --gl-spinner-rest-opacity: 0.56;
+  --gl-spinner-settled-opacity: 0.78;
+  --gl-spinner-boundary-opacity: 0.78;
+  --gl-spinner-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --gl-spinner-left-rest: translate(-1.9%, 1.05%);
+  --gl-spinner-left-boundary: translate(-0.95%, 0.525%);
+  --gl-spinner-right-rest: translate(1.9%, 1.05%);
+  --gl-spinner-core-rest: translate(0, -1.4%);
+
+  display: inline-flex;
+  width: var(--gl-spinner-size);
+  height: var(--gl-spinner-size);
+  flex: 0 0 var(--gl-spinner-size);
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.gl-spinner__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: inherit;
+}
+
+.gl-spinner__facet {
+  fill: currentColor;
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  animation-duration: var(--gl-spinner-duration);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.gl-spinner__facet--left {
+  animation-name: gl-spinner-left;
+}
+
+.gl-spinner__facet--right {
+  animation-name: gl-spinner-right;
+}
+
+.gl-spinner__facet--core {
+  animation-name: gl-spinner-core;
+}
+
+@keyframes gl-spinner-left {
+  0% {
+    transform: var(--gl-spinner-left-boundary);
+    opacity: var(--gl-spinner-boundary-opacity);
+    animation-timing-function: linear;
+  }
+  10% {
+    transform: translate(0, 0);
+    opacity: 1;
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  18%,
+  50% {
+    transform: translate(0, 0);
+    opacity: var(--gl-spinner-settled-opacity);
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  70% {
+    transform: var(--gl-spinner-left-rest);
+    opacity: var(--gl-spinner-rest-opacity);
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  90% {
+    transform: var(--gl-spinner-left-rest);
+    opacity: var(--gl-spinner-rest-opacity);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: var(--gl-spinner-left-boundary);
+    opacity: var(--gl-spinner-boundary-opacity);
+  }
+}
+
+@keyframes gl-spinner-right {
+  0%,
+  14% {
+    transform: var(--gl-spinner-right-rest);
+    opacity: var(--gl-spinner-rest-opacity);
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  34% {
+    transform: translate(0, 0);
+    opacity: 1;
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  42%,
+  62% {
+    transform: translate(0, 0);
+    opacity: var(--gl-spinner-settled-opacity);
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  82%,
+  100% {
+    transform: var(--gl-spinner-right-rest);
+    opacity: var(--gl-spinner-rest-opacity);
+  }
+}
+
+@keyframes gl-spinner-core {
+  0%,
+  30% {
+    transform: var(--gl-spinner-core-rest);
+    opacity: var(--gl-spinner-rest-opacity);
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  50% {
+    transform: translate(0, 0);
+    opacity: 1;
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  58%,
+  76% {
+    transform: translate(0, 0);
+    opacity: var(--gl-spinner-settled-opacity);
+    animation-timing-function: var(--gl-spinner-ease);
+  }
+  96%,
+  100% {
+    transform: var(--gl-spinner-core-rest);
+    opacity: var(--gl-spinner-rest-opacity);
+  }
+}
+
+.gl-spinner__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gl-spinner .gl-spinner__facet {
+    animation-name: none;
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

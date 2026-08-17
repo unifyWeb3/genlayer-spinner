@@ -1,0 +1,57 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  preserveAspectRatio="xMidYMid meet"
+  role="img"
+  aria-label="Loading"
+  color="currentColor"
+>
+  <style>
+    .gl-spinner-facet {
+      fill: currentColor;
+      transform-box: view-box;
+      transform-origin: 50% 50%;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    .gl-spinner-left { animation-name: gl-spinner-asset-left; }
+    .gl-spinner-right { animation-name: gl-spinner-asset-right; }
+    .gl-spinner-core { animation-name: gl-spinner-asset-core; }
+    @keyframes gl-spinner-asset-left {
+      0% { transform: translate(-0.95%, 0.525%); opacity: 0.78; animation-timing-function: linear; }
+      10% { transform: translate(0, 0); opacity: 1; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      18%, 50% { transform: translate(0, 0); opacity: 0.78; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      70% { transform: translate(-1.9%, 1.05%); opacity: 0.56; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      90% { transform: translate(-1.9%, 1.05%); opacity: 0.56; animation-timing-function: linear; }
+      100% { transform: translate(-0.95%, 0.525%); opacity: 0.78; }
+    }
+    @keyframes gl-spinner-asset-right {
+      0%, 14% { transform: translate(1.9%, 1.05%); opacity: 0.56; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      34% { transform: translate(0, 0); opacity: 1; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      42%, 62% { transform: translate(0, 0); opacity: 0.78; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      82%, 100% { transform: translate(1.9%, 1.05%); opacity: 0.56; }
+    }
+    @keyframes gl-spinner-asset-core {
+      0%, 30% { transform: translate(0, -1.4%); opacity: 0.56; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      50% { transform: translate(0, 0); opacity: 1; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      58%, 76% { transform: translate(0, 0); opacity: 0.78; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      96%, 100% { transform: translate(0, -1.4%); opacity: 0.56; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gl-spinner-facet { animation-name: none; transform: translate(0, 0); opacity: 1; }
+    }
+  </style>
+  <g transform="translate(5 7.7) scale(.92)">
+    <g id="facet-left" class="gl-spinner-facet gl-spinner-left">
+      <polygon points="44.26 32.35 27.72 67.12 43.29 74.9 0 91.93 44.26 0 44.26 32.35"/>
+    </g>
+    <g id="facet-right" class="gl-spinner-facet gl-spinner-right">
+      <polygon points="53.5 32.35 70.04 67.12 54.47 74.9 97.76 91.93 53.5 0 53.5 32.35"/>
+    </g>
+    <g id="facet-core" class="gl-spinner-facet gl-spinner-core">
+      <polygon points="48.64 43.78 58.33 62.94 48.64 67.69 39.47 62.92 48.64 43.78"/>
+    </g>
+  </g>
+</svg>
