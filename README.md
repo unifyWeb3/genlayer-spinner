@@ -1,109 +1,159 @@
 # GenLayer Spinner
 
-Community-contributed animated spinner proposal for the GenLayer Portal mission **Design the GenLayer Spinner**.
+### Three Perspectives, One Decision
 
-Selected design: **Three Perspectives, One Decision**  
-Motion profile: **V2-B Balanced / 1.00s**
-
-**Status:** production-ready contribution artifact for maintainer review. Portal integration has not been performed.
+A production-ready animated loading spinner designed for the GenLayer Portal.
 
 ![GenLayer Spinner preview](preview/spinner-preview.gif)
 
-## Files
+**[Open the interactive spinner lab →](https://unifyweb3.github.io/genlayer-spinner/demo/)**
 
-- `genlayer-spinner.svg` - self-contained animated SVG for direct review or inline use.
-- `spinner.css` - reusable Balanced-only animation and layout styles.
-- `GenLayerSpinner.svelte` - minimal Svelte 5-compatible wrapper.
-- `VALIDATION.md` - automated, browser, accessibility, and manual verification record.
-- `preview/spinner-preview.gif` - one recorded 1.00s motion loop for review.
+Selected profile: **V2-B / Balanced / 1.00s**
 
-## Concept
+## Why this direction
 
-The official three-facet GenLayer mark remains recognizable at every frame. Sequential, overlapping handoffs move through the three facets using only translation and opacity. The motion suggests separate perspectives moving through a shared relationship without depicting validators, a vote, protocol finality, or a success state.
+The spinner derives its geometry from the official three-facet GenLayer mark. The mark remains recognizable in every frame and in monochrome, including at compact interface sizes.
 
-## Svelte usage
+Instead of rotating the logo, the three facets move through restrained, overlapping handoffs. That creates a continuous loading rhythm while keeping the center and outer bounds stable.
+
+The motion takes conceptual inspiration from independent perspectives moving through a coherent shared relationship. It does **not** literally depict validator voting, transaction finality, AI reasoning, or blockchain topology.
+
+## Design principles
+
+| Principle | Implementation |
+| --- | --- |
+| GenLayer identity | Three-facet official mark geometry |
+| Motion | Overlapping facet handoffs |
+| Loop | Seamless 1.00s cycle |
+| Geometry | Translation + opacity only |
+| Rotation | None |
+| Scale | None |
+| Path morphing | None |
+| Color | `currentColor` / host-controlled |
+| Accessibility | Reduced-motion static fallback |
+| Small sizes | 16 / 20 / 24 / 32 / 48px |
+
+## Technical implementation
+
+The production package contains:
+
+- [`genlayer-spinner.svg`](genlayer-spinner.svg): self-contained animated SVG.
+- [`spinner.css`](spinner.css): reusable V2-B animation and layout rules.
+- [`GenLayerSpinner.svelte`](GenLayerSpinner.svelte): minimal Svelte 5-compatible wrapper.
+- No JavaScript animation loop or animation runtime dependency.
+
+The live lab retains V1, V2-A, and V2-C for comparison. Every V2-B example uses the canonical production keyframes from the root `spinner.css` file.
+
+## Usage
+
+### Standalone SVG
+
+```html
+<img src="./genlayer-spinner.svg" alt="Loading" width="24" height="24">
+```
+
+The standalone asset animates without external CSS. Because an external SVG cannot inherit the host document's `currentColor`, inline SVG or the Svelte wrapper is preferred for live theme adaptation.
+
+### Inline SVG + CSS
+
+```html
+<link rel="stylesheet" href="./spinner.css">
+
+<span class="gl-spinner" style="--gl-spinner-size: 20px" aria-hidden="true">
+  <svg class="gl-spinner__svg" viewBox="0 0 100 100" aria-hidden="true">
+    <g transform="translate(5 7.7) scale(.92)">
+      <g class="gl-spinner__facet gl-spinner__facet--left">
+        <polygon points="44.26 32.35 27.72 67.12 43.29 74.9 0 91.93 44.26 0 44.26 32.35" />
+      </g>
+      <g class="gl-spinner__facet gl-spinner__facet--right">
+        <polygon points="53.5 32.35 70.04 67.12 54.47 74.9 97.76 91.93 53.5 0 53.5 32.35" />
+      </g>
+      <g class="gl-spinner__facet gl-spinner__facet--core">
+        <polygon points="48.64 43.78 58.33 62.94 48.64 67.69 39.47 62.92 48.64 43.78" />
+      </g>
+    </g>
+  </svg>
+</span>
+```
+
+Color is inherited from the parent through `currentColor`.
+
+### Svelte
 
 ```svelte
 <script>
   import GenLayerSpinner from './GenLayerSpinner.svelte';
 </script>
 
-<!-- Decorative: the parent already owns loading semantics. -->
-<button disabled>
-  <GenLayerSpinner size={16} />
-  Loading
-</button>
+<!-- Decorative: parent or nearby text owns the loading semantics. -->
+<GenLayerSpinner size={16} />
 
-<!-- Semantic: the spinner owns one stable status announcement. -->
+<!-- Semantic: one stable status announcement. -->
 <GenLayerSpinner size={20} label="Loading contributions" />
 ```
 
-The component props are:
-
-| Prop | Type | Default | Purpose |
-| --- | --- | --- | --- |
-| `size` | number | `20` | Square CSS size in pixels |
-| `label` | `string \| null` | `null` | Non-null enables semantic `role="status"` mode |
-| `class` | string | `''` | Optional host class for placement or color context |
-
-Color is inherited from the parent through `currentColor`:
-
-```svelte
-<div style="color: var(--portal-accent, #7f52e1)">
-  <GenLayerSpinner size={24} label="Loading mission" />
-</div>
-```
-
-No color prop is provided. This keeps color ownership in the Portal's theme and semantic tokens.
-
-## Plain HTML usage
-
-Standalone SVG:
-
-```html
-<img src="./genlayer-spinner.svg" alt="Loading">
-```
-
-For inline web usage, paste the contents of `genlayer-spinner.svg` into the document so the host can control its inherited `currentColor`. The SVG includes its own CSS animation and fixed viewBox; no JavaScript is required.
-
-An external `<img src="genlayer-spinner.svg">` animates and defaults to black, but an external image cannot inherit the host document's `currentColor`. Inline SVG or the Svelte wrapper is recommended for live light/dark theming.
-
-## Size guidance
-
-- `16px`: button-local and compact table actions.
-- `20px`: default inline and compact panel loading.
-- `24px`: modal or prominent inline loading.
-- `32px`: larger panel or card loading.
-- `48px`: page-level loading only.
-
-The source does not add size-specific detail. The exact three-facet silhouette survives at every supported size.
-
-## Reduced motion
-
-`prefers-reduced-motion: reduce` disables all facet animation and renders the canonical aligned mark at full opacity. Loading semantics remain in the surrounding UI or the component's stable label.
+The component exposes only `size`, `label`, and the standard `class` alias.
 
 ## Accessibility
 
-- Use `label={null}` when a button, region, or nearby status text already communicates loading.
-- Pass an operation-specific label when this component should announce the state.
-- Put `aria-busy="true"` on the actual loading region, not on the spinner by default.
-- Announce completion or error once from the parent state transition.
-- Do not use the spinner for known progress, staged protocol status, errors, or timeouts.
+- Use decorative mode when a button, region, or nearby message already communicates loading.
+- Pass `label` when the component should provide one stable `role="status"` announcement.
+- Put `aria-busy="true"` on the region doing work, not on the spinner by default.
+- Keep operation-specific status text in the surrounding interface.
+- `prefers-reduced-motion: reduce` disables continuous motion and shows the aligned mark at full opacity.
 
-## Browser target
+The spinner is not intended for determinate progress, staged transaction status, errors, or timeouts.
 
-The implementation targets current evergreen browsers with SVG, CSS custom properties, `transform-box`, CSS animation, `currentColor`, and `prefers-reduced-motion` support. Chromium validation is recorded. Firefox, Safari/WebKit, and live screen-reader runtime checks remain explicitly unverified.
+## Validation
+
+### Verified
+
+- `58/58` production checks passed.
+- Chromium desktop and mobile rendering.
+- 1x and 2x pixel density.
+- 16 / 20 / 24 / 32 / 48px sizes.
+- Light, dark, monochrome, and accent contexts.
+- Reduced motion.
+- Standalone SVG and inline implementation.
+- 63.8-second continuous browser run.
+- SVG XML validation.
+- Svelte 5 compilation with zero warnings.
+
+### Not yet runtime-verified
+
+- Firefox.
+- Safari/WebKit.
+- Live screen-reader behavior.
+- Rendering inside the deployed Portal.
+
+See the complete [`VALIDATION.md`](VALIDATION.md) record.
+
+## Project structure
+
+```text
+genlayer-spinner/
+├── README.md
+├── genlayer-spinner.svg
+├── spinner.css
+├── GenLayerSpinner.svelte
+├── VALIDATION.md
+├── preview/
+│   └── spinner-preview.gif
+└── demo/
+    ├── index.html
+    ├── demo.css
+    ├── variants.css
+    └── v1.css
+```
 
 ## Provenance
 
-The facet coordinates match the official `GenLayer_Mark_Black.svg` published in the GenLayer Foundation design-system repository. The loading motion and production implementation are original work created for this mission. Maintainer approval of animated mark usage is still required.
-
-Official design source:
-
-https://github.com/genlayer-foundation/genlayer-design
+The facet coordinates match `GenLayer_Mark_Black.svg` from the [GenLayer Foundation design repository](https://github.com/genlayer-foundation/genlayer-design). The loading motion and implementation were created for the community mission. Animated mark usage remains subject to maintainer approval.
 
 ## Integration status
 
-**Portal integration has not yet been performed.**
+**Portal integration status: not yet integrated.** This repository contains the production-ready contribution artifact prepared for maintainer review.
 
-This repository is the production-ready contribution artifact submitted for maintainer review; it does not claim adoption or official approval. The public Portal source has been verified as `genlayer-foundation/points` on the `dev` branch, using Svelte 5 and Vite. The mission's current submission path requires a GitHub Repository URL through the Portal form. No Portal repository changes, Portal PR, or mission submission have been made.
+The target Portal repository was identified during contribution research, but no Portal changes or pull request have been made. This repository does not claim official approval or adoption.
+
+**Status: Ready for GenLayer Mission 12 review.**

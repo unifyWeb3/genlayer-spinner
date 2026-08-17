@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive review lab for the GenLayer Spinner contribution." />
+    <title>GenLayer Spinner Review Lab</title>
+    <link rel="stylesheet" href="../spinner.css" />
+    <link rel="stylesheet" href="./v1.css" />
+    <link rel="stylesheet" href="./variants.css" />
+    <link rel="stylesheet" href="./demo.css" />
+  </head>
+  <body>
+    <svg class="v2-symbols" aria-hidden="true" focusable="false">
+      <defs>
+        <polygon id="gl-facet-left" points="44.26 32.35 27.72 67.12 43.29 74.9 0 91.93 44.26 0 44.26 32.35" />
+        <polygon id="gl-facet-right" points="53.5 32.35 70.04 67.12 54.47 74.9 97.76 91.93 53.5 0 53.5 32.35" />
+        <polygon id="gl-facet-core" points="48.64 43.78 58.33 62.94 48.64 67.69 39.47 62.92 48.64 43.78" />
+      </defs>
+    </svg>
+
+    <header class="v2-topbar">
+      <div class="v2-brand">
+        <span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced gl-spinner-v2--static" style="--gl-v2-size: 18px" aria-hidden="true">
+          <svg class="gl-spinner-v2__svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg>
+        </span>
+        <span>GenLayer Spinner Review Lab</span>
+      </div>
+      <div class="v2-meta"><strong>V2-B selected</strong><span>SVG + CSS / maintainer review</span></div>
+    </header>
+
+    <main class="v2-main">
+      <section class="v2-intro" aria-labelledby="v2-overview-title">
+        <div>
+          <p class="v2-eyebrow">GenLayer Spinner</p>
+          <h1 id="v2-overview-title">Three Perspectives, One Decision</h1>
+          <p class="v2-lede">The recommended V2-B profile keeps the official three-facet geometry and overlaps facet handoffs so activity travels through the mark without whole-logo rotation, a completion beat, or a new metaphor.</p>
+        </div>
+        <div class="v2-intro-preview" data-testid="hero-v2-b">
+          <span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 68px" role="status">
+            <svg class="gl-spinner-v2__svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg>
+            <span class="gl-spinner-v2__sr-only">Loading spinner preview</span>
+          </span>
+        </div>
+      </section>
+
+      <section class="v2-section" aria-labelledby="v2-variants-title" data-testid="variants">
+        <div class="v2-section-head">
+          <h2 id="v2-variants-title">Controlled variants</h2>
+          <p class="v2-section-copy">All four samples use the same three polygons. V2-A rephases V1, V2-B overlaps handoffs, and V2-C increases that same directional flow. B is the selected V2 direction.</p>
+        </div>
+        <div class="v2-variant-grid">
+          <article class="v2-variant" data-variant-card="v1">
+            <div class="v2-variant-preview">
+              <span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 44px" aria-hidden="true">
+                <svg class="gl-spinner-v1__svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg>
+              </span>
+            </div>
+            <div class="v2-variant-meta"><p class="v2-variant-name">V1 / Balanced</p><p class="v2-variant-detail">1.05s / discrete phases / baseline</p></div>
+          </article>
+          <article class="v2-variant" data-variant-card="v2-a">
+            <div class="v2-variant-preview">
+              <span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 44px" aria-hidden="true">
+                <svg class="gl-spinner-v2__svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg>
+              </span>
+            </div>
+            <div class="v2-variant-meta"><p class="v2-variant-name">V2-A / Minimal</p><p class="v2-variant-detail">1.10s / rephased boundary / quietest</p></div>
+          </article>
+          <article class="v2-variant" data-variant-card="v2-b" data-recommended="true">
+            <div class="v2-variant-preview">
+              <span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 44px" aria-hidden="true">
+                <svg class="gl-spinner-v2__svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg>
+              </span>
+            </div>
+            <div class="v2-variant-meta"><p class="v2-variant-name v2-recommended">V2-B / Balanced / Recommended</p><p class="v2-variant-detail">1.00s / overlapping handoffs / restrained flow</p></div>
+          </article>
+          <article class="v2-variant" data-variant-card="v2-c">
+            <div class="v2-variant-preview">
+              <span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 44px" aria-hidden="true">
+                <svg class="gl-spinner-v2__svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg>
+              </span>
+            </div>
+            <div class="v2-variant-meta"><p class="v2-variant-name">V2-C / Forward Motion</p><p class="v2-variant-detail">0.92s / strongest overlap / review-only</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="v2-section" aria-labelledby="v2-comparison-title">
+        <div class="v2-section-head">
+          <h2 id="v2-comparison-title">Comparative review</h2>
+          <p class="v2-section-copy">Scores are design judgments from this prototype review, not user-study results. Five is strongest. False-finality scores are higher when risk is lower.</p>
+        </div>
+        <div class="v2-table-wrap">
+          <table class="v2-score-table">
+            <thead><tr><th scope="col">Criterion</th><th scope="col">V1</th><th scope="col">V2-A</th><th class="v2-score-winner" scope="col">V2-B</th><th scope="col">V2-C</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">GenLayer recognition</th><td>5</td><td>5</td><td class="v2-score-winner">5</td><td>5</td></tr>
+              <tr><th scope="row">Spinner recognition</th><td>3</td><td>4</td><td class="v2-score-winner">5</td><td>5</td></tr>
+              <tr><th scope="row">16px readability</th><td>4</td><td>4</td><td class="v2-score-winner">4</td><td>4</td></tr>
+              <tr><th scope="row">20px readability</th><td>4</td><td>4</td><td class="v2-score-winner">5</td><td>5</td></tr>
+              <tr><th scope="row">Motion clarity</th><td>3</td><td>4</td><td class="v2-score-winner">5</td><td>5</td></tr>
+              <tr><th scope="row">Repeated-exposure comfort</th><td>5</td><td>5</td><td class="v2-score-winner">4</td><td>3</td></tr>
+              <tr><th scope="row">Light mode</th><td>5</td><td>5</td><td class="v2-score-winner">5</td><td>5</td></tr>
+              <tr><th scope="row">Dark mode</th><td>5</td><td>5</td><td class="v2-score-winner">5</td><td>5</td></tr>
+              <tr><th scope="row">Monochrome</th><td>5</td><td>5</td><td class="v2-score-winner">5</td><td>5</td></tr>
+              <tr><th scope="row">Low false-finality risk</th><td>3</td><td>4</td><td class="v2-score-winner">5</td><td>4</td></tr>
+              <tr><th scope="row">Implementation simplicity</th><td>5</td><td>5</td><td class="v2-score-winner">5</td><td>5</td></tr>
+              <tr><th scope="row">Overall</th><td>4</td><td>4</td><td class="v2-score-winner">5</td><td>4</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="v2-score-note">The selected production profile is documented in the <a href="../VALIDATION.md">public validation record</a> after structural, raster, browser, and repeated-exposure checks.</p>
+      </section>
+
+      <section class="v2-section" aria-labelledby="v2-mono-title" data-testid="monochrome">
+        <div class="v2-section-head">
+          <h2 id="v2-mono-title">Monochrome first</h2>
+          <p class="v2-section-copy">Every candidate is shown in black on white and white on black before accent color. Geometry and phase must carry the identity.</p>
+        </div>
+        <div class="v2-mono-grid">
+          <article class="v2-mono-item">
+            <div class="v2-mono-pair"><div class="v2-mono-swatch v2-mono-light"><span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 32px" aria-hidden="true"><svg class="gl-spinner-v1__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div class="v2-mono-swatch v2-mono-dark"><span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 32px" aria-hidden="true"><svg class="gl-spinner-v1__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div></div>
+            <p class="v2-mono-label">V1</p>
+          </article>
+          <article class="v2-mono-item">
+            <div class="v2-mono-pair"><div class="v2-mono-swatch v2-mono-light"><span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div class="v2-mono-swatch v2-mono-dark"><span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div></div>
+            <p class="v2-mono-label">V2-A</p>
+          </article>
+          <article class="v2-mono-item">
+            <div class="v2-mono-pair"><div class="v2-mono-swatch v2-mono-light"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div class="v2-mono-swatch v2-mono-dark"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div></div>
+            <p class="v2-mono-label v2-recommended">V2-B / Recommended</p>
+          </article>
+          <article class="v2-mono-item">
+            <div class="v2-mono-pair"><div class="v2-mono-swatch v2-mono-light"><span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div class="v2-mono-swatch v2-mono-dark"><span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div></div>
+            <p class="v2-mono-label">V2-C</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="v2-section" aria-labelledby="v2-size-title" data-testid="sizes">
+        <div class="v2-section-head">
+          <h2 id="v2-size-title">Size matrix</h2>
+          <p class="v2-section-copy">The decision is anchored at 16, 20, and 24 px. The 32 and 48 px samples expose the same motion without adding detail.</p>
+        </div>
+        <div class="v2-table-wrap">
+          <table class="v2-size-table">
+            <thead><tr><th scope="col">Profile</th><th scope="col">16 px</th><th scope="col">20 px</th><th scope="col">24 px</th><th scope="col">32 px</th><th scope="col">48 px</th></tr></thead>
+            <tbody>
+              <tr>
+                <th scope="row">V1</th>
+                <td><span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 16px" aria-hidden="true"><svg class="gl-spinner-v1__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 20px" aria-hidden="true"><svg class="gl-spinner-v1__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 24px" aria-hidden="true"><svg class="gl-spinner-v1__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 32px" aria-hidden="true"><svg class="gl-spinner-v1__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 48px" aria-hidden="true"><svg class="gl-spinner-v1__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+              </tr>
+              <tr>
+                <th scope="row">V2-A</th>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 16px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 20px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 24px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 48px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+              </tr>
+              <tr>
+                <th class="v2-recommended" scope="row">V2-B / Recommended</th>
+                <td><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 16px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 20px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 24px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 48px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+              </tr>
+              <tr>
+                <th scope="row">V2-C</th>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 16px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 20px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 24px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+                <td><span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 48px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="v2-section" aria-labelledby="v2-surfaces-title" data-testid="surfaces">
+        <div class="v2-section-head">
+          <h2 id="v2-surfaces-title">Portal-context surfaces</h2>
+          <p class="v2-section-copy">V2-B is shown on the full review set after all candidates pass monochrome. The core motion and geometry are unchanged between surfaces.</p>
+        </div>
+        <div class="v2-surface-grid">
+          <div class="v2-surface v2-surface--white"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span class="v2-surface-name">White</span></div>
+          <div class="v2-surface v2-surface--lavender"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span class="v2-surface-name">Pale lavender</span></div>
+          <div class="v2-surface v2-surface--black"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span class="v2-surface-name">Black</span></div>
+          <div class="v2-surface v2-surface--violet"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span class="v2-surface-name">Dark violet</span></div>
+          <div class="v2-surface v2-surface--teal"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span class="v2-surface-name">Dark teal</span></div>
+          <div class="v2-surface v2-surface--translucent"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span class="v2-surface-name">Translucent surface</span></div>
+        </div>
+      </section>
+
+      <section class="v2-section" aria-labelledby="v2-accent-title">
+        <div class="v2-section-head">
+          <h2 id="v2-accent-title">Accent context</h2>
+          <p class="v2-section-copy">Purple is a review token only. The same four profiles are shown after the monochrome pass; the accent does not create the identity.</p>
+        </div>
+        <div class="v2-color-grid">
+          <article class="v2-color-item"><div class="v2-color-preview"><span class="gl-spinner-v1 gl-spinner-v1--balanced" style="--gl-spinner-v1-size: 32px; --gl-spinner-v1-muted-opacity: .72; --gl-spinner-v1-settled-opacity: .84" aria-hidden="true"><svg class="gl-spinner-v1__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v1__facet gl-spinner-v1__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v1__facet gl-spinner-v1__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div class="v2-color-meta"><p class="v2-color-name">V1</p><p class="v2-color-detail">Existing accent review baseline</p></div></article>
+          <article class="v2-color-item"><div class="v2-color-preview"><span class="gl-spinner-v2 gl-spinner-v2--minimal" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div class="v2-color-meta"><p class="v2-color-name">V2-A</p><p class="v2-color-detail">Minimal phase contrast</p></div></article>
+          <article class="v2-color-item"><div class="v2-color-preview"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div class="v2-color-meta"><p class="v2-color-name v2-recommended">V2-B / Recommended</p><p class="v2-color-detail">Balanced phase contrast</p></div></article>
+          <article class="v2-color-item"><div class="v2-color-preview"><span class="gl-spinner-v2 gl-spinner-v2--forward" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div class="v2-color-meta"><p class="v2-color-name">V2-C</p><p class="v2-color-detail">Strongest phase contrast</p></div></article>
+        </div>
+      </section>
+
+      <section class="v2-section" aria-labelledby="v2-motion-title" data-testid="reduced-motion">
+        <div class="v2-section-head">
+          <h2 id="v2-motion-title">Reduced motion</h2>
+          <p class="v2-section-copy">The forced preview matches the media-query fallback: aligned GenLayer geometry, full opacity, no replacement pulse. Loading meaning remains in status text.</p>
+        </div>
+        <div class="v2-reduced-grid">
+          <article class="v2-reduced-item"><div class="v2-reduced-icon"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 40px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div><h3>Default motion</h3><p>Overlapping facet handoffs carry continuous activity through the mark.</p></div></article>
+          <article class="v2-reduced-item"><div class="v2-reduced-icon"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced gl-spinner-v2--static" style="--gl-v2-size: 40px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span></div><div><h3>Reduced / disabled</h3><p>The canonical static mark preserves identity while the surrounding label communicates loading.</p></div></article>
+        </div>
+      </section>
+
+      <section class="v2-section" aria-labelledby="v2-usage-title" data-testid="usage-contexts">
+        <div class="v2-section-head">
+          <h2 id="v2-usage-title">Usage contexts</h2>
+          <p class="v2-section-copy">V2-B stays local to the boundary doing work. These are footprint and semantics tests, not proposed Portal components.</p>
+        </div>
+        <div class="v2-usage-grid">
+          <article class="v2-usage-item"><div class="v2-usage-preview"><button class="v2-button" type="button" disabled aria-busy="true"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 18px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span>Submitting</span></button></div><div class="v2-usage-meta"><p class="v2-usage-name">Button-local</p><p class="v2-usage-detail">Stable button width and visible operation label.</p></div></article>
+          <article class="v2-usage-item"><div class="v2-usage-preview"><span class="v2-inline-status" role="status"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 20px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span>Refreshing contributions</span></span></div><div class="v2-usage-meta"><p class="v2-usage-name">Inline content</p><p class="v2-usage-detail">One status announcement; SVG remains decorative.</p></div></article>
+          <article class="v2-usage-item"><div class="v2-usage-preview"><div class="v2-mini-table" aria-busy="true"><div class="v2-mini-row"><span>Community missions</span><span><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 16px" role="status"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100" aria-hidden="true"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg><span class="gl-spinner-v2__sr-only">Refreshing mission data</span></span></span></div><div class="v2-mini-row"><span>Contributor ranking</span><span>Latest</span></div><div class="v2-mini-row"><span>Community activity</span><span>12 active</span></div></div></div><div class="v2-usage-meta"><p class="v2-usage-name">Table/card refresh</p><p class="v2-usage-detail">The 16 px form preserves dense scanability.</p></div></article>
+          <article class="v2-usage-item"><div class="v2-usage-preview"><div class="v2-modal" role="dialog" aria-modal="false" aria-labelledby="v2-modal-title"><h3 id="v2-modal-title">Verify contribution</h3><p>The modal keeps context visible while the request is processed.</p><div class="v2-modal-status" role="status"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 22px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span>Checking submission</span></div></div></div><div class="v2-usage-meta"><p class="v2-usage-name">Modal</p><p class="v2-usage-detail">The label names the operation without a protocol claim.</p></div></article>
+          <article class="v2-usage-item"><div class="v2-usage-preview"><div class="v2-page-status" role="status" aria-busy="true"><span class="gl-spinner gl-spinner-v2 gl-spinner-v2--balanced" style="--gl-v2-size: 32px" aria-hidden="true"><svg class="gl-spinner-v2__svg" viewBox="0 0 100 100"><g transform="translate(5 7.7) scale(.92)"><g class="gl-spinner-v2__facet gl-spinner-v2__facet--left"><use href="#gl-facet-left" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--right"><use href="#gl-facet-right" /></g><g class="gl-spinner-v2__facet gl-spinner-v2__facet--core"><use href="#gl-facet-core" /></g></g></svg></span><span>Loading participant profile</span></div></div><div class="v2-usage-meta"><p class="v2-usage-name">Page-level</p><p class="v2-usage-detail">Reserved region, explicit status, stable footprint.</p></div></article>
+        </div>
+        <p class="v2-note"><strong>Not for:</strong> determinate progress, known page skeletons, transaction-stage timelines, errors, timeouts, or indefinite waits without retry handling.</p>
+      </section>
+
+      <footer class="v2-footer">V2-B is the frozen production candidate. Portal integration, canonical token mapping, and animated mark approval remain maintainer decisions.</footer>
+    </main>
+  </body>
+</html>
